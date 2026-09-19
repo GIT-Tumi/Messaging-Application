@@ -59,5 +59,21 @@ public class Login {
         }
         return "User registered successfully.";
     }
+    public boolean loginUser(String enteredUserName, String enteredPassword) {
+        lastLoginSuccessful = userName.equals(enteredUserName) && password.equals(enteredPassword);
+        return lastLoginSuccessful;
+    }
 
+    public String returnLoginStatus() {
+        return lastLoginSuccessful
+                ? "Welcome " + firstName + " " + lastName + ", it is great to see you again."
+                : "Username or password incorrect, please try again.";
+    }
+
+    // Getters
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getUserName() { return userName; }
+    public String getCellPhoneNumber() { return cellPhoneNumber;
+    }
 }
