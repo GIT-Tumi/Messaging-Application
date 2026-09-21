@@ -19,7 +19,7 @@ public class Main {
      System.out.println(user.registerUser());
 
      // Attempt login with correct credentials
-     boolean loggedIn = user.loginUser("tum_1", "Pass@1234!");
+    user.loginUser("tum_1", "Pass@1234!");
      System.out.println(user.returnLoginStatus());
 
      // Attempt login with wrong password

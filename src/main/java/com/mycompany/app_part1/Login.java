@@ -11,11 +11,11 @@ import java.util.regex.Pattern;
 public class Login {    
     private static final Pattern CELL_PHONE_PATTERN = Pattern.compile("^\\+27[0-9]{1,10}$");
 
-    private String firstName;
-    private String lastName;
-    private String userName;
-    private String password;
-    private String cellPhoneNumber;
+    private final String firstName;
+    private final String lastName;
+    private final String userName;
+    private final String password;
+    private final String cellPhoneNumber;
     private boolean lastLoginSuccessful;
 
     // Constructor
