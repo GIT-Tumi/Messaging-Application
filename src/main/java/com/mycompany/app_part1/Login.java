@@ -49,13 +49,16 @@ public class Login {
 
     public String registerUser() {
         if (!checkUserName()) {
-            return "Username is not correctly formatted; must contain an underscore and be ≤ 5 characters.";
+            return "Username is not correctly formatted; please ensure that your username contains an "
+                    + "underscore and is no more than five characters in length.";
         }
         if (!checkPasswordComplexity()) {
-            return "Password is not correctly formatted; must be ≥ 8 chars, include uppercase, number, and special char.";
+            return "Password is not correctly formatted; please ensure that the password contains at least "
+                    + "eight characters, a capital letter, a number, and a special character.";
         }
         if (!checkCellPhoneNumber()) {
-            return "Cell number is incorrectly formatted; must start with +27 and up to 10 digits.";
+            return "Cell number is incorrectly formatted or does not contain international code; please "
+                    + "correct the number and try again.";
         }
         return "User registered successfully.";
     }
@@ -66,7 +69,7 @@ public class Login {
 
     public String returnLoginStatus() {
         return lastLoginSuccessful
-                ? "Welcome " + firstName + " " + lastName + ", it is great to see you again."
+                ? "Welcome " + firstName + ", " + lastName + ", it is great to see you again."
                 : "Username or password incorrect, please try again.";
     }
 
