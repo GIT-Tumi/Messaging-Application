@@ -159,6 +159,57 @@ public class Quickchat {
         }
         return 1;
     }
+     // ------------------------------------------------------------------
+    // Stored Messages (Part 3)
+    // ------------------------------------------------------------------
+
+    private static void storedMessagesMenu(Scanner scanner) {
+        boolean inMenu = true;
+        while (inMenu) {
+            System.out.println("\n-- Stored Messages --");
+            System.out.println("a) Display sender and recipient of all stored messages");
+            System.out.println("b) Display the longest stored message");
+            System.out.println("c) Search for a message by message ID");
+            System.out.println("d) Search for all messages stored for a particular recipient");
+            System.out.println("e) Delete a message using its message hash");
+            System.out.println("f) Display a full report of all stored messages");
+            System.out.println("g) Back to main menu");
+            System.out.print("> ");
+            String choice = scanner.nextLine().trim().toLowerCase();
+
+            switch (choice) {
+                case "a":
+                    System.out.println(Message.displayStoredSenderAndRecipient());
+                    break;
+                case "b":
+                    System.out.println(Message.displayLongestStoredMessage());
+                    break;
+                case "c":
+                    System.out.print("Message ID to search for: ");
+                    String id = scanner.nextLine().trim();
+                    System.out.println(Message.searchByMessageID(id));
+                    break;
+                case "d":
+                    System.out.print("Recipient to search for: ");
+                    String recipient = scanner.nextLine().trim();
+                    System.out.println(Message.searchByRecipient(recipient));
+                    break;
+                case "e":
+                    System.out.print("Message hash to delete: ");
+                    String hash = scanner.nextLine().trim();
+                    System.out.println(Message.deleteByHash(hash));
+                    break;
+                case "f":
+                    System.out.println(Message.displayStoredMessagesReport());
+                    break;
+                case "g":
+                    inMenu = false;
+                    break;
+                default:
+                    System.out.println("Please choose a, b, c, d, e, f, or g.");
+            }
+        }
+    }    
  
     private static int readInt(Scanner scanner) {
         while (true) {
