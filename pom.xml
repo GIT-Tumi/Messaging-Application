@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>QuickChat</mainClass>
+                            <mainClass>com.mycompany.quickchat.Quickchat</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

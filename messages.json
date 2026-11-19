@@ -1,14 +1,14 @@
 [
   {
-    "messageID": "1014749324",
+    "messageID": "9704715017",
     "recipient": "+27838884567",
     "message": "Where are you? You are late! I have asked you to be on time.",
-    "messageHash": "10:0:WHERETIME"
+    "messageHash": "97:0:WHERETIME"
   },
   {
-    "messageID": "0377341636",
+    "messageID": "3056436785",
     "recipient": "+27838884567",
     "message": "Ok, I am leaving without you.",
-    "messageHash": "03:0:OKYOU"
+    "messageHash": "30:0:OKYOU"
   }
 ]
