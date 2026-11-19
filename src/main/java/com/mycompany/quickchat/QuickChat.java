@@ -11,7 +11,7 @@ import com.mycompany.app_part1.Login;
  *
  * @author tumi
  */
-public class Quickchat {
+public class QuickChat {
    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
  
